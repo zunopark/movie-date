@@ -5,6 +5,11 @@ export const handleMain = (req, res) => {
   res.render("home", { currentUser });
 };
 
+export const handleLogin = (req, res) => {
+  const currentUser = req.user;
+  res.render("login", { currentUser });
+};
+
 // 카카오 로그인
 export const kakaoLogin = passport.authenticate("kakao");
 export const kakaoCallback = (req, res) => {

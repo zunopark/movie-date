@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan("dev"));
 app.use(helmet());
-app.use("/uploads", express.static("uploads"));
+app.use(express.static("assets"));
+// app.use("/uploads", express.static("uploads"));
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,

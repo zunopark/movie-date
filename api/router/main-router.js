@@ -1,10 +1,11 @@
 import express from "express";
 import passport from "passport";
-import { handleMain, kakaoCallback, kakaoLogin, kakaoLogout } from "../controller/main-controller";
+import { handleLogin, handleMain, kakaoCallback, kakaoLogin, kakaoLogout } from "../controller/main-controller";
 
 const mainRouter = express.Router();
 
 mainRouter.get("/", handleMain);
+mainRouter.get("/login", handleLogin);
 // kakao login
 mainRouter.get("/auth/kakao", kakaoLogin);
 mainRouter.get("/auth/logout", kakaoLogout);

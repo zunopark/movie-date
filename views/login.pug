@@ -1,0 +1,10 @@
+extends layouts/main.pug
+
+block content
+    .social__login
+        if currentUser
+            a(href="/auth/logout")
+                |로그아웃
+        else
+            a(href="/auth/kakao")
+                |카카오 로그인
