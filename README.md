@@ -4,3 +4,4 @@
 
 ## 사용 기술 스택
 1. nodeJS, express
+2. mongoDB, mongoose
